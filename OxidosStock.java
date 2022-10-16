@@ -1,25 +1,32 @@
-package MetodoStock;
+package MetodoStock; //NOMBRE DEL PAQUETE 
 
-import java.util.Scanner;
-public class OxidosStock{
-	public void OxidosStock2() {
+import java.util.Scanner; //IMPORTAMOS LAS LIBRERIAS PERTINENTES 
+public class OxidosStock{ //CREAMOS LA CLASE OXIDOS STOCK 
+	public void OxidosStock2() { //METODO  QUE CONTENDRA NUESTRO CODIGO
+		//CREAMOS DOS ENTRADAS UNA PARA EL COMPUESTO Y OTRA PARA LA OXIDACION QUE NOS PASARA EL USUARIO PARA ESTABLECER LA NOMENCLATURA
 		Scanner Compuesto = new Scanner(System.in);
 		Scanner Oxidacion = new Scanner(System.in);
+		//LE PEDIMOS POR UN MENSAJE QUE INGRESE UN COMPUESTO
 		System.out.println("Introduce el compuesto");
-		String compuesto = Compuesto.nextLine();
+		String compuesto = Compuesto.nextLine(); //EL COMPUESTO QUE NOS PASO POR TECLADO ES ALMACENADO EN LA VARIABLE COMPUESTO DE TIPO STRING
+		//EVALUAMOS CON UN IF (equals.IgnoreCase NOS AYUDA A IGNORAR LAS MAYUSCULAS Y MINUSCULAS POR EJEMPLO SI  ESCRIBO C SERIA LO MISMO SI ESCRIBIERA c EN MINUSCULA
+		//SI EL COMPUESTO QUE NOS PASO EL USUARIO POR TECLADO  CONTIENE UN CARBONO 
 		if (compuesto.equalsIgnoreCase(compuesto) && compuesto.contains("C")) {
+			//SI CONTIENE UN CARBONO ENTONCES EVALUAME SI ESTA ACOMPAÃ‘ADO DE 2 OXIGENOS 
 		if(compuesto.contains("CO2")) {
+			//SI ESTA CONDICION ES VERDADERA ENTONCES IDENTIFICAMOS EL COMPUESTO Y SABEMOS QUE ES UN OXIDO DE CARBONO 
 			System.out.println("Es un OXIDO de Carbono (IV) ");
 		}
-	}else if (compuesto.equalsIgnoreCase(compuesto) && compuesto.contains("Pb")) {
+	}else if (compuesto.equalsIgnoreCase(compuesto) && compuesto.contains("Pb")) { //EN CASO QUE LAA CONDICION ANTERIOR HAYA SIDO FALSA EVALUAME ESTA OTRA 
+			//CONDICION 
 		if(compuesto.contains("PbO2")) {
-			System.out.println("Es un OXIDO de Plomo (IV)");
+			System.out.println("Es un OXIDO de Plomo (IV)"); //SI ES VERDADERA ENTONCES IMPRIME UN MENSAJE EN CONSOLA QUE ES UN OXIDO DE PLOMO
 		}
 	}else if (compuesto.equalsIgnoreCase(compuesto) && compuesto.contains("P")) {
 		if (compuesto.contains("P2O3")) {
-			System.out.println("Es un OXIDO de Fósforo (III)");
+			System.out.println("Es un OXIDO de FÃ³sforo (III)");
 		}else if (compuesto.contains("P2O5")) {
-			System.out.println("Es un OXIDO de Fósforo (V)");
+			System.out.println("Es un OXIDO de FÃ³sforo (V)");
 
 		}
 	}else if (compuesto.equalsIgnoreCase(compuesto) && compuesto.contains("Cl")) {
