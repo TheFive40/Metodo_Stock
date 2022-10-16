@@ -1,24 +1,30 @@
-package MetodoStock;
+package MetodoStock; //Paquete en el que se encuentra ubicado nuestra clase
 
-import java.util.Scanner;
+import java.util.Scanner; // Importamos la libreria de Java util especificamos que queremos la clase Scanner 
 
-public class Acidos_HidracidosStock {
-public void Acidos_Hidracido() {
-	Scanner entrada = new Scanner(System.in);
+public class Acidos_HidracidosStock { //Metodo Setter que luego sera llamado en la clase Principal es decir la clase que llev el metodo main
+public void Acidos_Hidracido() { // Nombre de la Clase 
+	Scanner entrada = new Scanner(System.in); //Pedimos que nos ingrese un compuesto para ellos instanciamos la clase Scanner que nos sirve para
+	//Crear el objeto de Entrada y posteriormente utilizarlo en una variable llamada Compuesto con el Metodo NextLine le indicamos que nos ingrese 
+	//un Texto 
 	System.out.println("Ingrese un compuesto por favor");
 	String compuesto = entrada.nextLine();
+	
+//Con  unos condicionales (IF) Evaluamos si el compuesto ingresado por el usuario es un "HCl" En caso de ser esto verdadero imprimira en consola 
+	//La nomenclatura del compuesto que ser谩 Cloruro de Hidrogeno esto lo hacemos con Systen.out.println en caso de ser falso ira a evaluar la siguiente condicion 
+	//y as铆 sucesivamente hasta que sea verdadera 
 	if(compuesto.contentEquals("HCl")) {
-		System.out.println("Es un Cloruro de Hidr骻eno");
+		System.out.println("Es un Cloruro de Hidr贸geno");
 	}else if (compuesto.contentEquals("H2S")) {
-		System.out.println("Es un Sulfuro de Hidr骻eno");
+		System.out.println("Es un Sulfuro de Hidr贸geno");
 	}else if (compuesto.contentEquals("HF")) {
-		System.out.println("Es un Fluoruro de Hidr骻eno");
+		System.out.println("Es un Fluoruro de Hidr贸geno");
 	}else if (compuesto.contentEquals("HI")) {
-		System.out.println("Es un Yodo de Hidr骻eno");
+		System.out.println("Es un Yodo de Hidr贸geno");
 	}else if (compuesto.contentEquals("HBr")) {
-		System.out.println("Es un Bromo de Hidr骻eno");
+		System.out.println("Es un Bromo de Hidr贸geno");
 	}else if (compuesto.contentEquals("H2Se")) {
-		System.out.println("Es un Selenium de Hidr骻eno");
+		System.out.println("Es un Selenium de Hidr贸geno");
 	}
 }
 	public static void main(String[] args) {
